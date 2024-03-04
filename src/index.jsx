@@ -1,19 +1,45 @@
 // index.jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Header from "./Header";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from "./components/Home";
+import Contact from "./components/Contact";
+import About from "./components/About";
 
 
 
-function App() {
-
-
+const App = () => {
     return (
-        <>
-            <Header />
-        </>
-    );
-}
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
 
+
+                <Route
+                    path="/About"
+                    element={
+                        <>
+
+                            <About />
+
+                        </>
+                    }
+                />
+
+                <Route
+                    path="/Contact"
+                    element={
+                        <>
+
+                            <Contact />
+
+                        </>
+                    }
+                />
+
+            </Routes>
+        </BrowserRouter>
+    );
+};
 var root = document.getElementById('root');
 ReactDOM.createRoot(root).render(<App />);
