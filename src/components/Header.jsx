@@ -5,7 +5,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 import "../css/style.css";
-import Logo from "../images/logo7.png";
+import Logo from "../images/logo.png";
 
 const Header = () => (
     <header className="hdr d-flex flex-row gap align-items-center px-5" style={{ justifyContent: 'space-between' }}>
